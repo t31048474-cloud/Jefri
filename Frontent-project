@@ -1,0 +1,132 @@
+import { useState } from "react";
+import "./App.css";
+
+function App() {
+  function showMessage() {
+    alert("Регестрация прошла успешно");
+  }
+
+  return (
+    <>
+      <div className="class">
+        <h1>Beatiful Form Disiner</h1>
+        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="Pasword" />
+        <input type="text" placeholder="Phone Number" />
+        <button onClick={showMessage}>Next</button>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #667eea, #764ba2, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.class {
+  width: 400px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.15);
+
+  transition: 0.4s;
+}
+
+.class:hover {
+  transform: translateY(-8px);
+}
+
+.class h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.class input {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.class input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.class input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px #8b5cf6;
+}
+
+.class button {
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.class button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #8b5cf6;
+}
+
+.class button:active {
+  transform: scale(0.98);
+}
